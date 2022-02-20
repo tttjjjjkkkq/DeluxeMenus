@@ -43,9 +43,17 @@ items:
     right_click_requirement:
       requirements:
         anything_here:
-          type: string equals
-          input: '%checkitem_mat:GRANITE%'
-          output: 'yes'
+          #type: string equals
+          #input: '%checkitem_mat:GRANITE%'
+          #output: 'yes'
+          type: has item
+          material: "granite"
+          amount: 1
+          #the requirement of type string equals, does not work with deluxemenu (in version 1.16.5)
+          #so i looked at the wiki, and changed it to has item
+          #after I tested it again on my server, and now it works
+          #after I tested it again on my server, and now it works
+          #thank you very much for your config !!! , helped me a lot to create the shop !!
       deny_commands:
       - '[message] &6Shop &8> &fYou don''t have &c1 x Granite &fto sell.'
     left_click_commands:
